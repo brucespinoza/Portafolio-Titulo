@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FONDO GENERAL */
+body{
+    background: #F5EDE6;
+    
+}
+
+/*responsive*/
+
+/* NAVBAR */
+#navbar {
+    background: #FFF8F2;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* LISTA */
+#menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ITEMS */
+#menu li {
+    margin: 0 15px;
+}
+
+/* LINKS */
+#menu a {
+    text-decoration: none;
+    color: #4A2E2B;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* HOVER */
+#menu a:hover {
+    color: #2F7A6D;
+}
+
+/* Línea animada */
+#menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #E76F51;
+    transition: 0.3s;
+}
+
+#menu a:hover::after {
+    width: 100%;
+}
+
+/* CARRITO */
+.carrito {
+    margin-left: auto;
+}
+
+.carrito a {
+    font-size: 22px;
+}
+
+.carrito a:hover {
+    transform: scale(1.2);
+}
+
+#menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4A2E2B;
+}
+
+.Nosotros{
+    background-color: #FFF8F2;
+    width: 100%;
+    min-height: 500px; /* mejor que height fijo */
+
+    background-image: url("../img/bienvenida.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    position: relative;
+    color: #4A2E2B;
+}
+
+.Nosotros h1{
+    color: #4A2E2B;
+    font-size: 35px;
+}
+
+.contenedor-cards{
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap; /* clave para responsive */
+}
+
+/* CARDS */
+.cards1, .cards2{
+    padding: 20px;
+    width: 45%;
+    min-height: 250px;
+    border-radius: 20px;
+    transition: 0.3s;
+    color: #4A2E2B;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #FFF8F2;
+}
+
+.cards1{
+    background-color: #FFF8F2;
+}
+
+.cards2{
+    background-color: #FFF8F2;
+}
+
+/* efecto hover */
+.cards1:hover, .cards2:hover{
+    transform: translateY(-10px);
+}
+
+/* BOTÓN PRINCIPAL */
+#BotonIni{
+    display: block;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #8B5E3C;
+    background-color: #2F7A6D;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#BotonIni a{
+    text-decoration: none;
+    color: white;
+}
+
+#BotonIni:hover{
+    background-color: #4FAF9F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* Navbar en columna */
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #FFF8F2;
+    }
+
+    /* Botón hamburguesa */
+    #menu-btn {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #4A2E2B;
+        align-self: flex-end;
+    }
+
+    /* Menú oculto inicialmente */
+    #menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.4s ease;
+        background: #FFF8F2;
+    }
+
+    #menu.active {
+        max-height: 300px; 
+    }
+
+    /* Items */
+    #menu li {
+        margin: 5px ;
+        text-align: center;
+    }
+
+    .carrito {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 768px){
+    .cards1, .cards2{
+        width: 90%;
+    }
+
+    .Nosotros h1{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px){
+    
+    .Nosotros{
+        padding: 30px 15px;
+    }
+
+    .Nosotros h1{
+        font-size: 24px;
+    }
+
+    .contenedor-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards1, .cards2{
+        width: 100%;
+    }
+}

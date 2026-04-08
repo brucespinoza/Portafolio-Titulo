@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FONDO GENERAL */
+body{
+    background: #F5EDE6;
+    
+}
+
+/* NAVBAR */
+#navbar {
+    background: #FFF8F2;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* LISTA */
+#menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ITEMS */
+#menu li {
+    margin: 0 15px;
+}
+
+/* LINKS */
+#menu a {
+    text-decoration: none;
+    color: #4A2E2B;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* HOVER */
+#menu a:hover {
+    color: #2F7A6D;
+}
+
+/* Línea animada */
+#menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #E76F51;
+    transition: 0.3s;
+}
+
+#menu a:hover::after {
+    width: 100%;
+}
+
+/* CARRITO */
+.carrito {
+    margin-left: auto;
+}
+
+.carrito a {
+    font-size: 22px;
+}
+
+.carrito a:hover {
+    transform: scale(1.2);
+}
+
+#menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4A2E2B;
+}
+
+.contacto-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #c78b56;
+    
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header arriba completo */
+.contacto-header {
+    width: 100%;
+}
+
+/* Formulario izquierda */
+.contacto-form {
+    width: 50%;
+    background-color: red;
+    padding: 20px;
+}
+
+/* Info derecha */
+.contacto-info {
+    width: 50%;
+    background-color: blue;
+    padding: 20px;
+}
